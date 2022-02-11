@@ -38,7 +38,7 @@ var gameS = ["December 10th (vs. CHS)",  "January 14th (at CHS)", "January 28th 
 
 // ok so month number is 1 less than actual number
 //["11;9;2021",  "0;13;2022", "0;27;2022", "1;24;2022", "3;0;2022", "3;28;2022", "4;12;2022"]
-var game = ["11;10;2021",  "0;14;2022", "0;28;2022", "1;11;2022", "3;1;2022", "3;29;2022", "4;13;2022"]
+var game = ["11;10;2021",  "0;14;2022", "0;28;2022", "01;11;2022", "03;01;2022", "03;29;2022", "04;13;2022"]
 
 function gameDAY() {
     var sheet = document.createElement('style')
