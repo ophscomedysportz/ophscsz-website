@@ -29,16 +29,21 @@ $('.form').contents().find('body').css('backgroundColor', 'linear-gradient(180de
 var frame = document.querySelector('.form');
 if (frame != null) {
     frame.style.background = 'linear-gradient(180deg, red, yellow);';
-    frame.contentWindow.document.body.style.backgroundColor = 'linear-gradient(180deg, red, yellow);';
+    frame.contentWindow.document.body.style.backgroundColor = 'linear-gradient(180deg, red, yellow);
 }*/
 
 
 
-var gameS = ["December 10th (vs. CHS)",  "January 14th (at CHS)", "January 28th (Newbie Game)", "February 25th", "April 1st", "April 29th", "May 13th"]
+
+
+
+//var gameS = ["December 10th (vs. CHS)",  "January 14th (at CHS)", "January 28th (Newbie Game)", "February 11th (at OCHS)", "April 1st", "April 29th", "May 13th"]
 
 // ok so month number is 1 less than actual number
 //["11;9;2021",  "0;13;2022", "0;27;2022", "1;24;2022", "3;0;2022", "3;28;2022", "4;12;2022"]
-var game = ["11;10;2021",  "0;14;2022", "0;28;2022", "01;11;2022", "03;01;2022", "03;29;2022", "04;13;2022"]
+
+
+//var game = ["11;10;2021",  "0;14;2022", "0;28;2022", "01;11;2022", "03;01;2022", "03;29;2022", "04;13;2022"]
 
 function gameDAY() {
     var sheet = document.createElement('style')
@@ -46,7 +51,13 @@ function gameDAY() {
     document.body.appendChild(sheet);
 }
 
-function getDateTime() {
+function getDateTime(jsonThing) {
+    var game = jsonThing["game"];
+    var gameS = jsonThing["gameS"];
+
+    console.log(game);
+    console.log(gameS);
+
     var d = new Date();
 
     var date = d.getDate();
@@ -61,8 +72,10 @@ function getDateTime() {
     var thg = ``;
     var gameDayToday = false;
 
-    const p = document.getElementById("jsTest");
-    
+    //dumbass js is retuning fucking null for no good reason imma kms
+    const p = document.getElementById("fuckJS");
+    console.log(p);
+    p.textContent = "thg";
     //TODO if statment for if today is friday
         
     i = 0;
@@ -77,6 +90,8 @@ function getDateTime() {
         console.log(date);
         console.log(month);
         console.log(year);*/
+        p.textContent = "thg";
+        //most likely bad code, fix later pls
         if (year < gYear) {
             thg = `Friday, ${gameS[i]}.`;
             break;
@@ -114,6 +129,7 @@ function getDateTime() {
         
 
     }
+    p.innerHTML = "thg";
     try {
         p.innerHTML = thg;
     } catch (error) {
@@ -126,7 +142,68 @@ function getDateTime() {
     //p.innerHTML = day <= 4 || new Date().getDay() == 6 ? `Next Meeting: Friday  ` : `Friday`;
 }
 
+async function populate() {
 
+
+    const requestURL = './dates.json';
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const jsonStuff = await response.json();
+
+    getDateTime(jsonStuff);
+
+/*
+    game = jsonStuff['game'];
+    gameS = jsonStuff['gameS'];
+    console.log(game);
+    console.log(gameS);
+    getDateTime(game, gameS);*/
+
+}
 
 navSlide();
-getDateTime();
+
+ YourNamespace = {
+    common: {
+        init : function(){ ; },
+        finalize : function(){
+            populate();
+        }
+    },
+    games: {
+        init : function() {
+            ;
+        }
+    }
+}
+
+
+UTIL = { 
+  fire : function(func,funcname, args){
+    var namespace = YourNamespace;  // indicate your obj literal namespace here
+
+    funcname = (funcname === undefined) ? 'init' : funcname;
+    if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
+      namespace[func][funcname](args);
+    }
+  }, 
+
+  loadEvents : function(){
+    var bodyId = document.body.id;
+
+    // hit up common first.
+    UTIL.fire('common');
+
+    // do all the classes too.
+    $.each(document.body.className.split(/\s+/),function(i,classnm){
+      UTIL.fire(classnm);
+      UTIL.fire(classnm,bodyId);
+    });
+
+    UTIL.fire('common','finalize');
+  }
+};
+
+// kick it all off here 
+$(document).ready(UTIL.loadEvents);
+
