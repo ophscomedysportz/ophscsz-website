@@ -141,7 +141,7 @@ function getDateTime(jsonThing) {
 
     //p.innerHTML = day <= 4 || new Date().getDay() == 6 ? `Next Meeting: Friday  ` : `Friday`;
 }
-
+/*
 async function populate() {
 
 
@@ -150,7 +150,7 @@ async function populate() {
     const response = await fetch(request);
     const jsonStuff = await response.json();
 
-    getDateTime(jsonStuff);
+    getDateTime(jsonStuff);*/
 
 /*
     game = jsonStuff['game'];
@@ -177,7 +177,7 @@ navSlide();
     }
 }
 
-
+/*
 UTIL = { 
   fire : function(func,funcname, args){
     var namespace = YourNamespace;  // indicate your obj literal namespace here
@@ -205,5 +205,5 @@ UTIL = {
 };
 
 // kick it all off here 
-$(document).ready(UTIL.loadEvents);
+$(document).ready(UTIL.loadEvents);*/
 
