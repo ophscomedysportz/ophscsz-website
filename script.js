@@ -37,13 +37,13 @@ if (frame != null) {
 
 
 
-//var gameS = ["December 10th (vs. CHS)",  "January 14th (at CHS)", "January 28th (Newbie Game)", "February 11th (at OCHS)", "April 1st", "April 29th", "May 13th"]
+var gameS = ["December 10th (vs. CHS)",  "January 14th (at CHS)", "January 28th (Newbie Game)", "February 11th (at OCHS)", "April 1st", "April 29th", "May 13th"]
 
 // ok so month number is 1 less than actual number
 //["11;9;2021",  "0;13;2022", "0;27;2022", "1;24;2022", "3;0;2022", "3;28;2022", "4;12;2022"]
 
 
-//var game = ["11;10;2021",  "0;14;2022", "0;28;2022", "01;11;2022", "03;01;2022", "03;29;2022", "04;13;2022"]
+var game = ["11;10;2021",  "0;14;2022", "0;28;2022", "01;11;2022", "03;01;2022", "03;29;2022", "04;13;2022"]
 
 function gameDAY() {
     var sheet = document.createElement('style')
@@ -51,9 +51,9 @@ function gameDAY() {
     document.body.appendChild(sheet);
 }
 
-function getDateTime(jsonThing) {
-    var game = jsonThing["game"];
-    var gameS = jsonThing["gameS"];
+function getDateTime(game, gameS) {
+    //var game = jsonThing["game"];
+    //var gameS = jsonThing["gameS"];
 
     console.log(game);
     console.log(gameS);
@@ -73,9 +73,12 @@ function getDateTime(jsonThing) {
     var gameDayToday = false;
 
     //dumbass js is retuning fucking null for no good reason imma kms
-    const p = document.getElementById("fuckJS");
+    let p = document.getElementById("dateItem");
     console.log(p);
-    p.textContent = "thg";
+    if (p == null){
+        return;
+    }
+    //p.textContent = "thg";
     //TODO if statment for if today is friday
         
     i = 0;
@@ -157,12 +160,25 @@ async function populate() {
     gameS = jsonStuff['gameS'];
     console.log(game);
     console.log(gameS);
-    getDateTime(game, gameS);*/
+    getDateTime(game, gameS);
 
-}
+}*/
+(function(window, document, undefined){
 
-navSlide();
+// code that should be taken care of right away
 
+
+    
+window.onload = init;
+    
+    function init(){
+        navSlide();
+        getDateTime(game, gameS);
+    }
+
+})(window, document, undefined);
+
+/*
  YourNamespace = {
     common: {
         init : function(){ ; },
@@ -176,7 +192,7 @@ navSlide();
         }
     }
 }
-
+*/
 /*
 UTIL = { 
   fire : function(func,funcname, args){
