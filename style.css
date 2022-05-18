@@ -555,13 +555,20 @@ button a:hover{
 
 }
 
+@media screen and (min-width: 751px){
+    .myGallery {
+        grid-template-columns: 1fr 1fr;
+        margin:10px auto;
+    }
+
+}
+
+
 .myGallery2 { 
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   align-items: stretch;
   justify-items: center;
-  margin: 10px auto;
   max-width: 1920px;
 }
 
