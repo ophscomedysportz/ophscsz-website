@@ -577,14 +577,14 @@ button a:hover{
     }
 
 }
-@media screen and (max-width: 350px){
+@media screen and (max-width: 450px){
     .grid-container {
         grid-template-columns: 2fr;
     }
 
 }
 
-@media screen and (min-width: 351px){
+@media screen and (min-width: 451px){
     .grid-container {
         grid-template-columns: 1fr 1fr;
     }
