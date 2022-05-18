@@ -37,7 +37,7 @@ nav {
 }
 
 nav ul {
-    width: 500px;
+    width: 600px;
     text-align:left;
     position: absolute;
     margin: 33px 0px 0px 10px;
@@ -174,7 +174,7 @@ nav a:active {
 
 /*Transition*/
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 620px){
     
     nav ul{
         
@@ -343,6 +343,125 @@ button a:hover{
 
 /*sections*/
 
+.qHeadSec1 {
+    margin:20px auto 0px;
+    height: auto;
+    width: 100%;
+    background-color: #23272a;
+    text-align: center;
+    align-content: center;
+    padding-top: 15px;
+    padding-bottom:10px;
+}
+
+.qSec1 {
+    margin: 10px auto 10px;
+    align-content:center;
+    text-align: left;
+    width:100%;
+    height:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.qSec1 .name h3 {
+    color:#db1010;
+}
+
+.qSec2 {
+    margin: 10px auto 10px;
+    align-content: center;
+    text-align:right;
+    width:100%;
+    height:auto;
+    background-color: #23272a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.qSec2 .name h3 {
+    color:#0917f5;
+}
+
+.qbox {
+    margin: 0px auto 10px;
+    width:60%;
+}
+
+@media screen and (max-width: 420px){
+    .qbox {
+        width:80%;
+    }
+    
+    .quote {
+        max-width: 100%;
+    }
+    
+
+}
+
+@media screen and (min-width: 421px){
+    .qbox {
+        width:60%;
+    }
+    
+    .quote {
+        max-width:80%;
+    }
+
+    .qSec1 .quote {
+        margin-right: auto; 
+        margin-left: 0;
+    }
+
+    .qSec2 .quote {
+        margin-left: auto; 
+        margin-right: 0;
+}
+
+}
+
+.quote {
+    border-radius: 15px;
+    width: fit-content;
+    height: 80%;
+    
+    
+}
+
+.qSec1 .quote {
+    background-color: #23272a;
+    margin-right: auto; 
+    margin-left: 0;
+}
+
+.qSec2 .quote {
+    background-color: #2C2F33;
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.quote h2 {
+    padding: 15px 10px 0px;
+}
+
+
+.qboxbox {
+    width: fit-content;
+}
+
+
+.name{
+    text-align: right;
+    align-content:center;
+    margin-right: 20px;
+    /*margin-right: 25%;*/
+}
+
+.name h3 {
+    padding-bottom: 10px;
+}
+
 .sec1 {
     margin:20px auto 0px;
     height: auto;
@@ -395,8 +514,8 @@ button a:hover{
     display:inline-block;
     margin:0px 15px 0px 15px;
 }
-
-@media screen and (max-width: 560px){
+/*560px*/
+@media screen and (max-width: 620px){
     .buttonC1 {
         margin:0px auto;
     }
@@ -458,8 +577,19 @@ button a:hover{
     }
 
 }
+@media screen and (max-width: 350px){
+    .grid-container {
+        grid-template-columns: 2fr;
+    }
 
+}
 
+@media screen and (min-width: 351px){
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
 
 .sec4 {
     margin-top:40px;
@@ -468,7 +598,6 @@ button a:hover{
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
     background-color: rgba(10, 59, 99, 0);
     padding: 10px;
 }
