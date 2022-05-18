@@ -168,11 +168,11 @@ async function populate() {
 // code that should be taken care of right away
 
 
-    
+navSlide();
 window.onload = init;
     
     function init(){
-        navSlide();
+        
         getDateTime(game, gameS);
     }
 
