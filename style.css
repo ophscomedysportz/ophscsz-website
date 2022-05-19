@@ -577,21 +577,32 @@ button a:hover{
   max-width: 100%;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1000px){
     .myGallery2 {
         grid-template-columns: 1fr;
         margin:15px;
     }
 
+
 }
-@media screen and (max-width: 450px){
+
+@media screen and (min-width: 1001px){
+    .myGallery2 {
+        grid-template-columns: 1fr 1fr;
+        margin:15px;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px){
     .grid-container {
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
     }
 
 }
 
-@media screen and (min-width: 451px){
+@media screen and (min-width: 1001px){
     .grid-container {
         grid-template-columns: 1fr 1fr;
     }
@@ -652,7 +663,6 @@ button a:hover{
 
 .grid-container2 {
     display: grid;
-    grid-template-columns: auto auto;
     background-color: rgba(10, 59, 99, 0);
     padding: 10px;
 }
@@ -693,6 +703,7 @@ button a:hover{
     padding:0px 70px 20px;
 }
 
+/*
 @media screen and (max-width: 1480px){
 
     .grid-container2 {
@@ -700,7 +711,7 @@ button a:hover{
     }
 
 }
-
+*/
 .lstSpc {
     margin: 15px auto;
 }
@@ -777,4 +788,5 @@ a:hover {
     }
 }
 /*GAMEDAYYYY*/
+
 /* BODY */
