@@ -580,7 +580,6 @@ button a:hover{
 @media screen and (max-width: 1000px){
     .myGallery2 {
         grid-template-columns: 1fr;
-        margin:15px;
     }
 
 
@@ -632,7 +631,7 @@ button a:hover{
 .grid-item:hover {
     background-color: rgba(63, 63, 63, 0.2);
     /*animation: .5s titleG;*/
-    font-size:30px;    
+    font-size:30px;
 }
 
 @keyframes titleG {
@@ -661,11 +660,60 @@ button a:hover{
     text-decoration: underline;
 }
 
+.grid-container3 {
+    display: grid;
+    background-color: rgba(10, 59, 99, 0);
+    padding: 10px;
+}
+
+.grid-item3 {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    /*border: 3px solid rgb(63, 63, 63);*/
+    padding: 20px;
+    text-align: center;
+    transition: background-color 1s, font-size 0.6s;
+}
+
+
+
+.grid-item3:hover {
+    background-color: rgba(63, 63, 63, 0.2);
+    /*animation: .5s titleG;*/
+    font-size:20px;
+}
+
+.grid-item3 ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    align-content: center;
+}
+
+.grid-item3 li {
+    display:block;
+    font-size:15pt;
+    list-style-type: none;
+}
+
+.grid-item3 h2 {
+    text-decoration: underline;
+}
+
+.grid-item3 p {
+    font-size:18px;
+}
+
+.NI {
+    font-size: 25px;
+}
+
 .grid-container2 {
     display: grid;
     background-color: rgba(10, 59, 99, 0);
     padding: 10px;
 }
+
 .grid-item2 {
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
@@ -676,10 +724,11 @@ button a:hover{
     transition: background-color 1s, font-size 0.6s;
 }
 
+
 .grid-item2:hover {
     background-color: rgba(63, 63, 63, 0.2);
     /*animation: .5s titleG;*/
-    font-size:30px;    
+    font-size:30px;
 }
 
 .grid-item2 ul {
