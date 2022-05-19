@@ -14,7 +14,7 @@ const navSlide = () => {
                 link.style.animation = '';
             }
             else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + .4}s`;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + .2}s`;
             }
         });
         expand.classList.toggle('toggle')
@@ -55,8 +55,8 @@ function getDateTime(game, gameS) {
     //var game = jsonThing["game"];
     //var gameS = jsonThing["gameS"];
 
-    console.log(game);
-    console.log(gameS);
+    //console.log(game);
+    //console.log(gameS);
 
     var d = new Date();
 
