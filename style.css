@@ -174,7 +174,7 @@ nav a:active {
 
 /*Transition*/
 
-@media screen and (max-width: 620px){
+@media screen and (max-width: 720px){
     
     nav ul{
         
@@ -515,7 +515,7 @@ button a:hover{
     margin:0px 15px 0px 15px;
 }
 /*560px*/
-@media screen and (max-width: 620px){
+@media screen and (max-width: 720px){
     .buttonC1 {
         margin:0px auto;
     }
