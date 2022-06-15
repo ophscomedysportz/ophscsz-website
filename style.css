@@ -245,6 +245,16 @@ nav a:active {
 
 /*main*/
 
+.vidBG {
+    background-color: #2C2F33;
+    border-radius: 10px;
+
+}
+
+#message {
+    margin: 0px auto;
+    width:75%;
+}
 
 /*buttons (NOTE TO FUTURE SELF: LOOK OVER AND IMPROVE BUTTON CODE)*/
 .buttonRed {
