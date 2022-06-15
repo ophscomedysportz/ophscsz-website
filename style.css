@@ -248,7 +248,14 @@ nav a:active {
 .vidBG {
     background-color: #2C2F33;
     border-radius: 10px;
+    width:550px;
+    padding-top:5px;
+}
 
+.vBox {
+    margin: 0px auto;
+    width:550px;
+    height:380px;
 }
 
 #message {
