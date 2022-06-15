@@ -8,6 +8,7 @@ body {
     margin:0px;
     background-color: #2C2F33;
     font-family: "Baskerville";
+    
 }
 
 /* HEADER */
@@ -37,7 +38,7 @@ nav {
 }
 
 nav ul {
-    width: 650px;
+    width: 720px;
     text-align:left;
     position: absolute;
     margin: 33px 0px 0px 10px;
@@ -174,7 +175,7 @@ nav a:active {
 
 /*Transition*/
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 830px){
     
     nav ul{
         
@@ -245,22 +246,82 @@ nav a:active {
 
 /*main*/
 
-.vidBG {
-    background-color: #2C2F33;
-    border-radius: 10px;
-    width:550px;
-    padding-top:5px;
+.myGalleryVids { 
+    background-color: #23272a;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    align-items: stretch;
+    justify-items: center;
+    margin: 10px auto;
 }
 
 .vBox {
     margin: 0px auto;
-    width:550px;
-    height:380px;
+    width:80%;
+    height:500px;
+}
+
+.vidBG {
+    background-color: #2C2F33;
+    border-radius: 10px;
+    width:auto;
+    padding-top:5px;
+    height:500px;
+}
+
+.vidBG iframe {
+    max-width: 100%;
+    height: 400px;
+}
+
+.vBoxMessage {
+    margin: 0px auto;
+    width:80%;
+    height:auto;
+}
+
+.vidBGmessage {
+    background-color: #2C2F33;
+    border-radius: 10px;
+    width:auto;
+    padding-top:5px;
+    height:auto;
 }
 
 #message {
     margin: 0px auto;
     width:75%;
+}
+
+@media screen and (max-width: 630px){
+    .vidBG iframe {
+        height: 250px;
+    }
+
+    .vBox {
+        height:350px;
+    }
+    
+    .vidBG {
+        height:350px;
+    }
+
+}
+
+@media screen and (min-width: 1030px){
+    .vidBG iframe {
+        height: 550px;
+    }
+
+    .vBox {
+        height:650px;
+    }
+    
+    .vidBG {
+        height:650px;
+    }
+
 }
 
 /*buttons (NOTE TO FUTURE SELF: LOOK OVER AND IMPROVE BUTTON CODE)*/
@@ -532,7 +593,7 @@ button a:hover{
     margin:0px 15px 0px 15px;
 }
 /*560px*/
-@media screen and (max-width: 720px){
+@media screen and (max-width: 830px){
     .buttonC1 {
         margin:0px auto;
     }
@@ -624,6 +685,10 @@ button a:hover{
     }
 
 }
+
+
+  
+
 
 .sec4 {
     margin-top:40px;
